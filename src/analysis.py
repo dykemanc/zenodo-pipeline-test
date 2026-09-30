@@ -1,7 +1,7 @@
 """Toy analysis step: z-score normalisation of a numeric series."""
 import statistics
 
-MAX_ITERATIONS = 10
+MAX_ITERATIONS = 25
 
 
 def load_data():

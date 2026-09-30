@@ -10,7 +10,7 @@ def load_data():
 
 def preprocess_data(values):
     mu = statistics.mean(values)
-    sd = statistics.pstdev(values)
+    sd = statistics.stdev(values)
     return [(v - mu) / sd for v in values]
 
 

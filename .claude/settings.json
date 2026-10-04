@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git clean *)",
+      "Bash(git reset --hard*)",
+      "Bash(git filter-repo*)"
+    ]
+  }
+}

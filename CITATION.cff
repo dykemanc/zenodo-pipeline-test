@@ -1,9 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "TEST REPOSITORY for the Zenodo Sandbox. Not research; please do not cite."
+type: software
 title: "Zenodo Pipeline Test Repository"
+abstract: "Test repository for practising the GitHub-to-Zenodo release pipeline on the Zenodo Sandbox: pre-commit hooks, release tagging, DOI minting, version DOIs and cross-linking a code record to a mock preprint. Contains toy code and placeholder text only."
 authors:
-  - family-names: "Dykeman"
-    given-names: "Cass"
+  - family-names: Dykeman
+    given-names: Cass
+    affiliation: Oregon State University
     orcid: "https://orcid.org/0000-0001-7708-1409"
 version: "0.1.0"
+date-released: "2026-10-04"
 license: MIT
+repository-code: "https://github.com/dykemanc/zenodo-pipeline-test"
+keywords:
+  - zenodo sandbox
+  - test repository
+  - doi
+  - pipeline practice

@@ -14,6 +14,13 @@
 
 Practice repo for testing pre-commit hooks and Zenodo Sandbox DOI minting.
 
+## Files
+
+- `src/analysis.py`, `test_pipeline.py`: the toy code and its test
+- `paper/mock_preprint.pdf`: a 3-page mock preprint (placeholder text); `paper/make_mock_preprint.py` rebuilds it
+- `CITATION.cff`, `.zenodo.json`: release metadata (keep the two in agreement)
+- `PRACTICE.md`: the step-by-step practice checklist
+
 ## Usage
 
     python src/analysis.py

@@ -1,0 +1,16 @@
+{
+  "title": "Zenodo Pipeline Test Repository",
+  "upload_type": "software",
+  "description": "<p><strong>Test repository.</strong> Used only to practise the GitHub-to-Zenodo release pipeline on the Zenodo Sandbox. Not research; do not cite. Contains toy code and a mock preprint of placeholder text.</p>",
+  "creators": [
+    {
+      "name": "Dykeman, Cass",
+      "affiliation": "Oregon State University",
+      "orcid": "0000-0001-7708-1409"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": ["zenodo sandbox", "test repository", "doi", "pipeline practice"],
+  "related_identifiers": []
+}

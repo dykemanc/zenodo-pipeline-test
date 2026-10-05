@@ -23,14 +23,14 @@ echo "2. upload $FILE"
 curl -fsS -X PUT "$bucket/$(basename "$FILE")" "${auth[@]}" --upload-file "$FILE" >/dev/null
 
 echo "3. add metadata"
-curl -fsS -X PUT "$API/deposit/depositions/$id" "${auth[@]}" "${json[@]}" -d '{
-  "metadata": {
-    "title": "Sandbox test",
-    "upload_type": "dataset",
-    "description": "Practice upload",
-    "creators": [{"name": "Dykeman, Cass"}]
-  }
-}' >/dev/null
+# Defaults give the original dummy dataset. For the preprint:
+#   TITLE="..." UPLOAD_TYPE=publication PUB_TYPE=preprint RELATED_DOI=10.5072/zenodo.614305 ./zenodo_sandbox.sh paper/mock_preprint.pdf
+meta=$(jq -n --arg t "${TITLE:-Sandbox test}" --arg u "${UPLOAD_TYPE:-dataset}" --arg p "${PUB_TYPE:-}" \
+  --arg d "${DESCRIPTION:-Practice upload}" --arg r "${RELATED_DOI:-}" '{metadata: ({
+    title: $t, upload_type: $u, description: $d, creators: [{name: "Dykeman, Cass"}]}
+    + (if $p != "" then {publication_type: $p} else {} end)
+    + (if $r != "" then {related_identifiers: [{identifier: $r, relation: "isSupplementedBy", scheme: "doi"}]} else {} end))}')
+curl -fsS -X PUT "$API/deposit/depositions/$id" "${auth[@]}" "${json[@]}" -d "$meta" >/dev/null
 
 if [ "${2:-}" = "--publish" ]; then
   echo "4. publish"

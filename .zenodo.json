@@ -1,16 +1,13 @@
 {
-  "title": "Zenodo Pipeline Test Repository",
-  "upload_type": "software",
-  "description": "<p><strong>Test repository.</strong> Used only to practise the GitHub-to-Zenodo release pipeline on the Zenodo Sandbox. Not research; do not cite. Contains toy code and a mock preprint of placeholder text.</p>",
+  "title": "Mock Research Pipeline Test and Preprint",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Dry run automated archival pipeline test containing mock analysis code, dataset, and preprint PDF.",
   "creators": [
     {
-      "name": "Dykeman, Cass",
-      "affiliation": "Oregon State University",
-      "orcid": "0000-0001-7708-1409"
+      "name": "Dykeman, Cass"
     }
   ],
-  "license": "MIT",
   "access_right": "open",
-  "keywords": ["zenodo sandbox", "test repository", "doi", "pipeline practice"],
-  "related_identifiers": []
+  "license": "cc-by-4.0"
 }

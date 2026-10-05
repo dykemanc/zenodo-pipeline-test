@@ -1,8 +1,8 @@
 {
-  "title": "Mock Research Pipeline Test and Preprint",
+  "title": "[TEST / DO NOT CITE] Mock Research Pipeline Test and Preprint",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "Dry run automated archival pipeline test containing mock analysis code, dataset, and preprint PDF.",
+  "description": "ATTENTION: PIPELINE TEST RECORD ONLY. This is a synthetic mock record created solely to test automated GitHub-to-Zenodo release workflows. Do not cite, reuse, or rely on any manuscripts, code, or datasets in this repository.",
   "creators": [
     {
       "name": "Dykeman, Cass"

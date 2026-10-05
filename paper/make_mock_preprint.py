@@ -46,8 +46,6 @@ with PdfPages("paper/mock_preprint.pdf", metadata={"Title": TITLE, "Author": "Ca
         ("h", "Abstract"), ("p", LOREM), ("h", "Introduction"), ("p", LOREM), ("p", LOREM)])
     page(pdf, 2, [("h", "Methods"), ("p", LOREM), ("h", "Results"), ("p", LOREM), ("p", LOREM)], figure=True)
     page(pdf, 3, [("h", "Discussion"), ("p", LOREM), ("h", "Code and data availability"),
-        ("p", "The code for this mock study is archived on the Zenodo Sandbox: [SANDBOX DOI OF THE CODE RELEASE GOES HERE]. "
-              "Replace this placeholder after the release is minted, then upload this PDF as its own record "
-              "(Publication, Preprint) and add the code DOI as a related identifier (is supplemented by)."),
+        ("p", "The code for this mock study is archived on the Zenodo Sandbox: 10.5072/zenodo.614305 (sandbox DOI, not a real DOI)."),
         ("h", "References"), ("p", "[1] Placeholder, A. (2026). Lorem ipsum. Journal of Test Records, 1(1), 1-3.")])
 print("wrote paper/mock_preprint.pdf")

@@ -5,3 +5,5 @@
 # Zenodo Pipeline Test
 
 This repository contains mock research files, scripts, and preprints used to test automated archival pipelines.
+
+Sandbox concept DOI (all versions, not a real DOI): [10.5072/zenodo.614305](https://sandbox.zenodo.org/doi/10.5072/zenodo.614305)

@@ -8,8 +8,8 @@ authors:
     given-names: Cass
     affiliation: Oregon State University
     orcid: "https://orcid.org/0000-0001-7708-1409"
-version: "0.1.1"
-date-released: "2026-10-05"
+version: "0.1.2"
+date-released: "2026-10-06"
 license: MIT
 doi: "10.5072/zenodo.614305"
 repository-code: "https://github.com/dykemanc/zenodo-pipeline-test"

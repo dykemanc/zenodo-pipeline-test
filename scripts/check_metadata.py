@@ -14,7 +14,7 @@ errors = []
 if zenodo_names != cff_names:
     errors.append(f"authors differ: .zenodo.json={sorted(zenodo_names)} CITATION.cff={sorted(cff_names)}")
 if z["license"].lower() != c["license"].lower():
-    print(f'warning: license differs: .zenodo.json={z["license"]} CITATION.cff={c["license"]}')
+    errors.append(f'license differs: .zenodo.json={z["license"]} CITATION.cff={c["license"]}')
 
 if errors:
     sys.exit("\n".join(errors))

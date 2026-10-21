@@ -2,6 +2,8 @@
 
 This file is for team practice editing in GitHub.
 
+**Citation/format style for this draft: APA 7th edition**
+
 ## Quick Formatting (No memorization needed)
 - **Bold**: type `**text**` → **text**
 - *Italic*: type `*text*` → *text*
@@ -20,37 +22,55 @@ Tip: if you're in GitHub's editor, you can often highlight text and use keyboard
 2. Add one sentence under your section.
 3. Click **Commit changes** with a short message.
 
-## Section A: Title_Page
+## Section A: Title Page
 Title
 
-## Section B: Abstract Page
+## Section B: Abstract
 Abstract
 
 ## Section C: Introduction
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+(State the research problem, significance, and objective/hypothesis.)
 
 ## Section D: Methods
-**Design**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Design**  
+(Describe study design, data source/participants, measures, and analysis plan.)
 
-***Corpus***
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+***Corpus***  
+(Describe corpus composition, preprocessing, inclusion criteria, and size.)
 
 ## Section E: Results
-(Add draft text here)
+(Add draft text here; report key findings with numbers/statistics where relevant.)
 
 ## Section F: Discussion
-(Add draft text here)
+(Add interpretation, limitations, and implications.)
 
-## Section G: References
+## Section G: References (APA 7th)
+
+Journal article template:  
+Author, A. A., & Author, B. B. (Year). Title of the article. *Title of Journal, 12*(3), 45–67. https://doi.org/xx.xxx/yyyy
+
+Book template:  
+Author, A. A. (Year). *Title of the book*. Publisher.
+
+Webpage template:  
+Author, A. A. (Year, Month Day). Title of page. *Site Name*. URL
+
+In-text citation examples:  
+- Narrative: Author (Year)  
+- Parenthetical: (Author, Year)  
+- Direct quote: (Author, Year, p. 10)
 
 ## Section H: Tables
+Table 1. [Title] — [What it shows]
 
 ## Section I: Figures
+Figure 1. [Title] — [Caption]
 
-## Section J: Author_Declarations
+## Section J: Author Declarations
+(Conflicts of interest, funding, ethics, data/code availability, author contributions.)
 
 ## Section K: Next Actions
 - [ ] Add one paragraph per section
-- [ ] Add at least one reference
+- [ ] Add at least one APA-formatted reference
+- [ ] Ensure every in-text citation has a matching reference entry
 - [ ] Finalize a mock abstract

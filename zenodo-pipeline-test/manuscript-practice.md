@@ -20,23 +20,37 @@ Tip: if you're in GitHub's editor, you can often highlight text and use keyboard
 2. Add one sentence under your section.
 3. Click **Commit changes** with a short message.
 
-## Section A: Introduction
+## Section A: Title_Page
+Title
+
+## Section B: Abstract Page
+Abstract
+
+## Section C: Introduction
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Section B: Methods
+## Section D: Methods
 **Design**
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Corpus
+***Corpus***
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Section C: Results
+## Section E: Results
 (Add draft text here)
 
-## Section D: Discussion
+## Section F: Discussion
 (Add draft text here)
 
-## Section E: Next Actions
+## Section G: References
+
+## Section H: Tables
+
+## Section I: Figures
+
+## Section J: Author_Declarations
+
+## Section K: Next Actions
 - [ ] Add one paragraph per section
 - [ ] Add at least one reference
 - [ ] Finalize a mock abstract

@@ -12,6 +12,11 @@ your edits go to Cass as a suggestion, and Cass reviews them before they become 
 | Figures | [`figures/`](figures/) | No, Cass maintains these |
 | GenAI use logs | [`genai-logs/`](genai-logs/) | You upload your own logs here |
 
+## Before your first edit: keep your email private
+
+Every edit you save is public and carries an email address. To make it a private GitHub address instead of your own,
+go to [github.com/settings/emails](https://github.com/settings/emails) and turn on **Keep my email addresses private**.
+
 ## How to make an edit
 
 1. Open [`manuscript/manuscript.md`](manuscript/manuscript.md).

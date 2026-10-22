@@ -10,6 +10,7 @@ your edits go to Cass as a suggestion, and Cass reviews them before they become 
 | The manuscript | [`manuscript/manuscript.md`](manuscript/manuscript.md) | **Yes**, this is where you write |
 | Tables | [`tables/`](tables/) | No, Cass maintains these |
 | Figures | [`figures/`](figures/) | No, Cass maintains these |
+| GenAI use logs | [`genai-logs/`](genai-logs/) | You upload your own logs here |
 
 ## How to make an edit
 
@@ -25,6 +26,18 @@ your edits go to Cass as a suggestion, and Cass reviews them before they become 
 click the **...** menu next to the file name, and choose **Edit file**. Your new commit is added to the same pull request.
 
 **Questions instead of edits:** in your pull request, click the **+** next to any line to leave a comment.
+
+## How to upload a GenAI use log
+
+If you used GenAI while drafting, run the `genai-log` skill at the end of that chat and download the log file it makes.
+File names follow `genai-log-YYYY-MM-DD-<initials>-<topic>.md`, for example `genai-log-2026-10-22-cd-discussion-draft.md`.
+
+1. Open the [`genai-logs`](genai-logs/) folder. Your upload lands in whichever folder you are viewing.
+2. Click **Add file**, then **Upload files**, and drag your log file in.
+3. Choose **Create a new branch for this commit and start a pull request**, then **Propose changes**, then **Create pull request**.
+
+**To put the log in the same pull request as your manuscript edits:** before step 1, use the branch menu
+at the top left of the file list to switch to your own branch (it has a name like `patch-1`).
 
 ## One habit that helps a lot
 

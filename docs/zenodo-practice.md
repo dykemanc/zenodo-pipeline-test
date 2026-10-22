@@ -3,13 +3,13 @@
 Goal: turn a GitHub release into a Zenodo Sandbox DOI, then publish the mock preprint and link the two records.
 Everything here uses **sandbox.zenodo.org**, never zenodo.org. Sandbox DOIs start with `10.5072`, are not permanent, and the sandbox can be wiped at any time.
 
-Source checklist: `zenodo-pipeline-test/PRACTICE.md`. Items marked **[verify]** have not been confirmed by a real run; note what you actually see.
+Items marked **[verify]** have not been confirmed by a real run; note what you actually see.
 
 ## Before you start (5 min)
 
 - [ ] GitHub account `dykemanc` and a Zenodo **Sandbox** account (separate from real Zenodo; "Log in with GitHub" is easiest).
 - [ ] `gh` is installed and logged in: `gh auth status`
-- [ ] In `zenodo-pipeline-test/`, the test passes: `python3 test_pipeline.py`
+- [ ] In the repo folder, the test passes: `python3 test_pipeline.py`
 - [ ] `git log --format='%ae' | sort -u` shows only the GitHub noreply address. Never push the Outlook address.
 
 ## Part A: First release (code record)
@@ -25,7 +25,7 @@ git push origin --tags
 **2. Switch the repo on in the sandbox.** Do this BEFORE the release, or no record is created.
 Sandbox → your name (top right) → **Settings** → **GitHub** → **Sync now** → toggle `zenodo-pipeline-test` **ON**.
 
-**3. Check the metadata.** `CITATION.cff` and `.zenodo.json` must agree (title, author, ORCID, license). If both exist, Zenodo uses `.zenodo.json` **[verify]**.
+**3. Check the metadata.** `CITATION.cff` and `.zenodo.json` must agree (title, author, ORCID, license). If both exist, Zenodo uses `.zenodo.json` (confirmed; see Lessons learned).
 
 **4. Create the release.**
 
@@ -46,10 +46,10 @@ Wait 1 to 2 minutes **[verify]**, then open https://sandbox.zenodo.org/uploads. 
 
 **6.** Add the **concept DOI** and the DOI badge to `README.md`, and the DOI to `CITATION.cff` (`doi:` field). Badge URL format: **[verify]**, copy the snippet from the Zenodo record's sidebar.
 
-**7.** In `paper/make_mock_preprint.py`, replace `[SANDBOX DOI OF THE CODE RELEASE GOES HERE]` (page 3) with the code DOI, then rebuild:
+**7.** In `scripts/make_mock_preprint.py`, replace `[SANDBOX DOI OF THE CODE RELEASE GOES HERE]` (page 3) with the code DOI, then rebuild:
 
 ```bash
-python3 paper/make_mock_preprint.py
+python3 scripts/make_mock_preprint.py
 git add -A && git commit -m "Add code DOI" && git push
 ```
 
@@ -90,9 +90,32 @@ Write down what confused you. Then repeat on real zenodo.org, which needs its ow
 | No record after the release | Repo toggle was off, or the release was created before it was switched on. Toggle ON, then publish a new release. **[verify]** |
 | Release is a draft or pre-release | May not archive **[verify]** |
 | Commits not linked to your GitHub profile | Commit email not on the GitHub account |
-| Record metadata is wrong | `.zenodo.json` overrides `CITATION.cff` **[verify]**; fix the file and release again |
+| Record metadata is wrong | `.zenodo.json` overrides `CITATION.cff`; fix the file and release again |
 | Can't change files in a published record | By design. Make a new version |
 
 ## Optional: API route
 
-`zenodo_sandbox.sh` uploads a dummy file through the API. It is a contrast exercise, not part of this flow.
+`scripts/zenodo_sandbox.sh` uploads a dummy file through the API. It is a contrast exercise, not part of this flow.
+
+## Lessons learned (v0.1.0 to v0.1.3)
+
+- **Two metadata files can disagree.** `.zenodo.json` said `cc-by-4.0` while `LICENSE` and
+  `CITATION.cff` said MIT. Zenodo uses `.zenodo.json`, so the code record carried the wrong
+  license until v0.1.2. `scripts/check_metadata.py` now fails CI if authors or license differ.
+- **Licenses are per record and not retroactive.** v0.1.2 shows MIT; v0.1.0 and v0.1.1 keep
+  `cc-by-4.0`. Fixing metadata means a new release. Code (MIT) and the preprint (CC-BY) are
+  licensed separately, each in its own record.
+- **The concept DOI is the stable one.** It stayed `10.5072/zenodo.614305` across every release
+  while each version got a new DOI. Cite and link the concept DOI unless you mean one exact release.
+- **The preprint shares the concept DOI** with the code versions in this sandbox run
+  (`v0.1.0-preprint` appears in the same version list). Check how your real record groups them.
+- **Release order matters.** A tag archives the repo as it was at that moment. The repo checklist
+  merged after v0.1.2 and so only shipped in v0.1.3. Merge, then bump `CITATION.cff`, then tag.
+- **Merge via PR so CI runs first.** CI caught nothing here, but the pre-commit step (gitleaks,
+  large-file check) had never run anywhere before the first PR.
+- **CI runs twice per push** when the workflow triggers on both `push` and `pull_request`.
+  Harmless; restrict `push` to `master` if it bothers you.
+- **API tokens stay with you.** Editing a published record (related identifiers) needs your
+  sandbox token or the web UI. Don't hand a token to an assistant or paste it into a repo file.
+- **Before the real run:** switch from `sandbox.zenodo.org` to `zenodo.org` deliberately (real DOIs
+  are permanent), remove the "test / do not cite" banners and metadata, and re-check the license.

@@ -1,6 +1,6 @@
 """Build paper/mock_preprint.pdf: a 3-page MOCK preprint (placeholder text) for practising
 the Zenodo deposit. Needs only matplotlib. Run from the repository root:
-    python3 paper/make_mock_preprint.py
+    python3 scripts/make_mock_preprint.py
 """
 import textwrap
 import matplotlib

@@ -20,3 +20,7 @@ Sandbox concept DOI (all versions, not a real DOI): [10.5072/zenodo.614305](http
 | [`docs/`](docs/) | Zenodo practice guide and repo checklist |
 
 Run the checks: `python3 test_pipeline.py` and `python3 scripts/check_links.py`.
+
+## License
+
+Code is MIT ([`LICENSE`](LICENSE)). The text, tables, and figures in `manuscript/`, `tables/`, and `figures/` are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

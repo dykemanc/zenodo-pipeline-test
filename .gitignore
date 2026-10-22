@@ -7,4 +7,3 @@ config.ini
 .venv/
 *.egg-info/
 outputs/
-zenodo-pipeline-test/

@@ -32,6 +32,17 @@ click the **...** menu next to the file name, and choose **Edit file**. Your new
 Leave a blank line between paragraphs.
 This lets Cass see exactly which sentence you changed instead of a whole highlighted paragraph.
 
+```markdown
+First sentence of paragraph 1.
+Second sentence of paragraph 1.
+
+First sentence of paragraph 2.
+```
+
+One catch: a line that starts with `#`, `- `, `* `, `>` or a number and period like `1. `
+turns into a heading, bullet, quote or numbered item.
+If a sentence has to start that way, put a backslash before it, for example `2024\. was the year`.
+
 ## Copy and paste these
 
 Point to a table (change the number in both places):

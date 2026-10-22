@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240" font-family="Arial, sans-serif" font-size="12">
+  <rect width="360" height="240" fill="#fff"/>
+  <line x1="50" y1="200" x2="340" y2="200" stroke="#000"/>
+  <line x1="50" y1="20" x2="50" y2="200" stroke="#000"/>
+  <rect x="80" y="110" width="50" height="90" fill="#555"/>
+  <rect x="170" y="80" width="50" height="120" fill="#555"/>
+  <rect x="260" y="50" width="50" height="150" fill="#555"/>
+  <text x="105" y="218" text-anchor="middle">A</text>
+  <text x="195" y="218" text-anchor="middle">B</text>
+  <text x="285" y="218" text-anchor="middle">C</text>
+  <text x="195" y="236" text-anchor="middle">Condition</text>
+  <text x="16" y="110" text-anchor="middle" transform="rotate(-90 16 110)">Mean score</text>
+</svg>

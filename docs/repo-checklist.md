@@ -31,7 +31,7 @@ Based on the prevalence data in Hora, Montandon & Costa, *What's Inside a GitHub
 | `.zenodo.json` | Only if you need to override what Zenodo reads from the GitHub release. If both files exist, Zenodo uses this one. |
 | A metadata consistency check in CI | `.zenodo.json` and `CITATION.cff` can drift apart, so check authors and license (see `scripts/check_metadata.py`). This repo caught a real MIT vs cc-by-4.0 mismatch that way. |
 | DOI in the README and `CITATION.cff` | Use the concept DOI, which always points to the latest version. |
-| A provenance log such as `GenAI_provenance/` | Only if you disclose AI use. Keep it short. |
+| A provenance log such as `genai-logs/` | Only if you disclose AI use. Keep it short. |
 | Large data stored outside the repo | GitHub caps files at 100 MB, so upload big files to Zenodo directly. |
 
 ## Tier 4: only with outside contributors or a public user base

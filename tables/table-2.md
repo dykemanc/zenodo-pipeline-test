@@ -1,4 +1,4 @@
-**Table 1**
+**Table 2**
 
 *One-Way Analysis of Variance for Outcome Scores by Condition*
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Practice upload to the Zenodo SANDBOX (test DOIs, 10.5072/...).
-# Usage: ZENODO_TOKEN=... ./zenodo_sandbox.sh FILE [--publish]
+# Usage: ZENODO_TOKEN=... scripts/zenodo_sandbox.sh FILE [--publish]
 # Without --publish it stops at an editable draft.
 set -euo pipefail
 
@@ -24,7 +24,7 @@ curl -fsS -X PUT "$bucket/$(basename "$FILE")" "${auth[@]}" --upload-file "$FILE
 
 echo "3. add metadata"
 # Defaults give the original dummy dataset. For the preprint:
-#   TITLE="..." UPLOAD_TYPE=publication PUB_TYPE=preprint RELATED_DOI=10.5072/zenodo.614305 ./zenodo_sandbox.sh paper/mock_preprint.pdf
+#   TITLE="..." UPLOAD_TYPE=publication PUB_TYPE=preprint RELATED_DOI=10.5072/zenodo.614305 scripts/zenodo_sandbox.sh paper/mock_preprint.pdf
 meta=$(jq -n --arg t "${TITLE:-Sandbox test}" --arg u "${UPLOAD_TYPE:-dataset}" --arg p "${PUB_TYPE:-}" \
   --arg d "${DESCRIPTION:-Practice upload}" --arg r "${RELATED_DOI:-}" '{metadata: ({
     title: $t, upload_type: $u, description: $d, creators: [{name: "Dykeman, Cass"}]}

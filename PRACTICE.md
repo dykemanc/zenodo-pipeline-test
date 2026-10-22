@@ -43,3 +43,26 @@ kept **outside** this repository: upload it as its own Dataset record and link i
 ## F. Afterwards
 
 12. Note what was confusing. Then redo the real thing on zenodo.org, not the sandbox.
+
+## G. Lessons learned (v0.1.0 to v0.1.3)
+
+- **Two metadata files can disagree.** `.zenodo.json` said `cc-by-4.0` while `LICENSE` and
+  `CITATION.cff` said MIT. Zenodo uses `.zenodo.json`, so the code record carried the wrong
+  license until v0.1.2. `scripts/check_metadata.py` now fails CI if authors or license differ.
+- **Licenses are per record and not retroactive.** v0.1.2 shows MIT; v0.1.0 and v0.1.1 keep
+  `cc-by-4.0`. Fixing metadata means a new release. Code (MIT) and the preprint (CC-BY) are
+  licensed separately, each in its own record.
+- **The concept DOI is the stable one.** It stayed `10.5072/zenodo.614305` across every release
+  while each version got a new DOI. Cite and link the concept DOI unless you mean one exact release.
+- **The preprint shares the concept DOI** with the code versions in this sandbox run
+  (`v0.1.0-preprint` appears in the same version list). Check how your real record groups them.
+- **Release order matters.** A tag archives the repo as it was at that moment. `REPO_CHECKLIST.md`
+  merged after v0.1.2 and so only shipped in v0.1.3. Merge, then bump `CITATION.cff`, then tag.
+- **Merge via PR so CI runs first.** CI caught nothing here, but the pre-commit step (gitleaks,
+  large-file check) had never run anywhere before the first PR.
+- **CI runs twice per push** when the workflow triggers on both `push` and `pull_request`.
+  Harmless; restrict `push` to `master` if it bothers you.
+- **API tokens stay with you.** Editing a published record (related identifiers) needs your
+  sandbox token or the web UI. Don't hand a token to an assistant or paste it into a repo file.
+- **Before the real run:** switch from `sandbox.zenodo.org` to `zenodo.org` deliberately (real DOIs
+  are permanent), remove the "test / do not cite" banners and metadata, and re-check the license.

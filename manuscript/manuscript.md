@@ -22,7 +22,7 @@ State the research problem, its significance, and the objective or hypotheses.)
 
 ### Design
 
-(Describe the study design, data source or participants, measures, and analysis plan.)
+test 1 2 3 
 
 ### Corpus
 
